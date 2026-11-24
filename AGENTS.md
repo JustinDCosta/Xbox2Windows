@@ -83,12 +83,12 @@ List the registered tests with `ctest --preset dev -N`. Use
 | Area | Command |
 |---|---|
 | CPU translation | `ctest --preset dev --no-tests=error -R '^cpu_' -V` |
-| Script states | `ctest --preset dev --no-tests=error -R '^script_(state_literals\|path_links)$' -V` |
-| Textures | `ctest --preset dev --no-tests=error -R '^(bcpack_prefix_and_mip_tail\|bc7_tile_swizzle\|bc7_draw_warp\|texture_bc_volume)$' -V` |
+| Script states | `ctest --preset dev --no-tests=error -R '^script_(state_literals|path_links)$' -V` |
+| Textures | `ctest --preset dev --no-tests=error -R '^(bcpack_prefix_and_mip_tail|bc7_tile_swizzle|bc7_draw_warp|texture_bc_volume)$' -V` |
 | Shader translation | `ctest --preset dev -R '^pixel_aot_' -V` |
-| D3D12 and ray tracing | `ctest --preset dev -R '^bvh_(differential\|wave64)_hardware$' -V` |
-| Windows runtime | `ctest --preset dev -R 'era_heap\|desktop_memory_query'` |
-| PE tooling | `ctest --preset dev -R 'static_exe_intake\|conditional_import_paths'` |
+| D3D12 and ray tracing | `ctest --preset dev -R '^bvh_(differential|wave64)_hardware$' -V` |
+| Windows runtime | `ctest --preset dev -R 'era_heap|desktop_memory_query'` |
+| PE tooling | `ctest --preset dev -R 'static_exe_intake|conditional_import_paths'` |
 
 Tests ending in `_warp` use Microsoft WARP. Tests ending in `_hardware` use a
 physical GPU and may return 77 (capability skip). A skip is not a pass and not a
